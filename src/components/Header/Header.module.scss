@@ -1,0 +1,13 @@
+.wrap {
+    height: 88px;
+    display: flex;
+
+    .logo {
+        width: 121px;
+        height: 30px;
+    }
+
+    .info {
+        display: flex;
+    }
+}

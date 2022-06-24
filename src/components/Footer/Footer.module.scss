@@ -1,0 +1,32 @@
+.wrap {
+    background-color: #011846;
+    color: #fff;
+    height: 228px;
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img {
+        background-color: inherit;
+    }
+
+    .info {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .name_company {
+        display: inline;
+    }
+
+    .social_networks {
+        display: flex;
+    }
+}
