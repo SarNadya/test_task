@@ -1,16 +1,22 @@
 import React from 'react';
 import styles from './PostList.module.scss';
-// import PostItem from '../PostItem/PostItem';
 
-function PostList ({posts}) {
+function PostList ({articles, requestError, err}) {
+    if (requestError) return (
+        <div className={styles.err}> 
+            <div>{err.name}</div>
+            <div> {err.message} </div>
+        </div>
+    )
+
     return (
         <div className={styles.list}>
-            {posts.map(post =>
-                <div key={post.author + post.publishedAt} className={styles.item}>
-                    <div className={styles.date}> {new Date(post.publishedAt).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'})} </div>
-                    <div className={styles.title}> {post.title} </div>
-                    <div className={styles.content}> {post.description} </div>
-                    <button> {post.author} </button>
+            {articles.map(article =>
+                <div key={article.author + article.publishedAt} className={styles.item}>
+                    <div className={styles.date}> {new Date(article.publishedAt).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'})} </div>
+                    <div className={styles.title}> {article.title} </div>
+                    <div className={styles.content}> {article.description} </div>
+                    <button> {article.author} </button>
                 </div>
             )}
         </div>

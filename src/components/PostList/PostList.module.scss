@@ -1,3 +1,14 @@
+.err {
+    height: 400px;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 34px;
+}
+
 .list {
     background: #F6F9FF;
     height: 750px;
@@ -10,7 +21,6 @@
     .item {
         display: flex;
         flex-direction: column;
-        // width: 572px;
         height: 252px;
         padding: 24px;
         border-radius: 20px;
