@@ -8,10 +8,9 @@ function AuthorSelect({articles, getSortedPosts}) {
         <Autocomplete
             id='author-select'
             sx={{ width: 300 }}
-            // value='author'
             options={articles}
             autoHighlight
-            onChange={() => getSortedPosts()}
+            onChange={(event, value) => getSortedPosts(value)}
             getOptionLabel={(option) => option.author}
             renderOption={(props, option) => (
                 <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
@@ -31,5 +30,4 @@ function AuthorSelect({articles, getSortedPosts}) {
         />
     );
 }
-
 export default AuthorSelect;
