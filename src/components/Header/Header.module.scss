@@ -1,6 +1,8 @@
 .wrap {
     height: 88px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     // position: fixed;
 
     .logo {
@@ -10,5 +12,9 @@
 
     .info {
         display: flex;
+
+        .tel {
+            margin-right: 30px;
+        }
     }
 }

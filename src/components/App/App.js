@@ -7,6 +7,7 @@ import styles from './App.module.scss';
 import axios from 'axios';
 import OnLoadingPostsData from '../OnLoadingPostsData/OnLoadingPostsData';
 import AuthorSelect from '../AuthorSelect/AuthorSelect';
+import DateSelect from '../DateSelect/DateSelect';
 
 function App() {
   const DataLoading = OnLoadingPostsData(PostList);
@@ -59,11 +60,16 @@ function App() {
     }
   };
 
+  function getSortedPostsDate(value) {
+    console.log('Workind');
+  };
+
   return (
     <div className={styles.wrap}>
       <Header/>
       <Article/>
       <AuthorSelect articles={posts.articles} getSortedPosts={getSortedPosts}/>
+      <DateSelect articles={posts.articles} getSortedPostsDate={getSortedPostsDate}/>
       <DataLoading isLoading={posts.loading} articles={posts.filteredArticles} requestError={posts.requestError} err={posts.error}/>
       <Footer/>
     </div>

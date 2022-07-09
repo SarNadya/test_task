@@ -7,7 +7,7 @@ function Header() {
         <div className={styles.wrap}>
             <img src={logo} alt='logo' className={styles.logo}/>
             <div className={styles.info}>
-                <div> 8 800 000 00 00 </div>
+                <div className={styles.tel}> 8 800 000 00 00 </div>
                 <div> sales@logo.ru </div>
             </div>
         </div>
