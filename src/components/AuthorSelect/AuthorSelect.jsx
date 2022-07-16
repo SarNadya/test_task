@@ -2,12 +2,14 @@ import React from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import user from './img/user.png';
+import Stack from '@mui/material/Stack';
 
 function AuthorSelect({articles, getSortedPosts}) {
     return (
         <Autocomplete
             id='author-select'
-            sx={{ width: 300 }}
+            sx={{ width: 335, mr: 3, mb: 4 }}
             options={articles}
             autoHighlight
             onChange={(event, value) => getSortedPosts(value)}
@@ -20,7 +22,12 @@ function AuthorSelect({articles, getSortedPosts}) {
             renderInput={(params) => (
                 <TextField
                     {...params}
-                    label="Выбор автора"
+                    label={
+                        <Stack spacing={1} direction="row">
+                            <img src={user} alt='user_logo'/>
+                            <div>Выбор автора</div>
+                        </Stack>
+                    }
                     inputProps={{
                         ...params.inputProps,
                         autoComplete: 'new-password',

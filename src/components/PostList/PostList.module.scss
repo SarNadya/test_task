@@ -11,12 +11,12 @@
 
 .list {
     background: #F6F9FF;
-    height: 750px;
+    height: 796px;
     overflow: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 138px;
+    padding: 52px-32px 9.5% 80px 9.5%;
 
     .item {
         display: flex;
@@ -39,7 +39,9 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 32px;
+            height: 55px;
             padding-bottom: 16px;
+            overflow: hidden;
         }
 
         .content {

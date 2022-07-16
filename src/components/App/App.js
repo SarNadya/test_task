@@ -68,8 +68,10 @@ function App() {
     <div className={styles.wrap}>
       <Header/>
       <Article/>
-      <AuthorSelect articles={posts.articles} getSortedPosts={getSortedPosts}/>
-      <DateSelect articles={posts.articles} getSortedPostsDate={getSortedPostsDate}/>
+      <div className={styles.form_select}>
+        <AuthorSelect articles={posts.articles} getSortedPosts={getSortedPosts}/>
+        <DateSelect articles={posts.articles} getSortedPostsDate={getSortedPostsDate}/>
+      </div>
       <DataLoading isLoading={posts.loading} articles={posts.filteredArticles} requestError={posts.requestError} err={posts.error}/>
       <Footer/>
     </div>

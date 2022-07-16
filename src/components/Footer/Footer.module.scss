@@ -1,11 +1,13 @@
 .wrap {
     background-color: #011846;
     color: #fff;
-    height: 228px;
+    height: 228px-51px-48px;
+    padding: 48px 138px 51px 138px;
 
     .menu {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 66px;
     }
 
     img {
@@ -13,8 +15,10 @@
     }
 
     .info {
+        width: 39.6%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
 
         a {
             text-decoration: none;
@@ -22,11 +26,20 @@
         }
     }
 
-    .name_company {
-        display: inline;
-    }
-
-    .social_networks {
+    .wrapper {
         display: flex;
+        justify-content: space-between;
+
+        .name_company {
+            display: inline;
+            font-size: 14px;
+        }
+    
+        .social_networks {
+            display: flex;
+            width: 10.8%;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

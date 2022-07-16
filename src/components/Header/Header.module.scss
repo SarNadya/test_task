@@ -1,9 +1,13 @@
 .wrap {
+    background: #fff;
     height: 88px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    // position: fixed;
+    padding: 0 9.5%;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
 
     .logo {
         width: 121px;
@@ -12,9 +16,11 @@
 
     .info {
         display: flex;
+        font-weight: 500;
+        color: #888888;
 
         .tel {
-            margin-right: 30px;
+            margin-right: 42px;
         }
     }
 }
