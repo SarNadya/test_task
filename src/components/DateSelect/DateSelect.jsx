@@ -21,9 +21,9 @@ function DateSelect({articles, getSortedPostsDate}) {
                 }}
                 renderInput={(startProps, endProps) => (
                     <React.Fragment>
-                        <TextField sx={{width:'140px'}} {...startProps} />
+                        <TextField sx={{ backgroundColor:'#fff' }} {...startProps} />
                         <Box sx={{ mx: 1 }}> - </Box>
-                        <TextField sx={{width:'140px'}} {...endProps} />
+                        <TextField sx={{ backgroundColor:'#fff' }} {...endProps} />
                     </React.Fragment>
                 )}
             />

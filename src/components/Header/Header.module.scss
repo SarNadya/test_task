@@ -9,18 +9,62 @@
     top: -1px;
     z-index: 1;
 
+    @media (max-width: 875px) {
+        padding: 0 4%;
+    }
+
+    @media (max-width: 390px) {
+        height: 58px;
+        padding-bottom: 13px;
+    }
+
     .logo {
         width: 121px;
         height: 30px;
+
+        @media (max-width: 390px) {
+            width: 96.6px;
+            height: 24px;
+        }
     }
 
     .info {
         display: flex;
         font-weight: 500;
-        color: #888888;
 
         .tel {
             margin-right: 42px;
+
+            @media (max-width: 600px) {
+                background: url('./img/tel.svg') right center no-repeat;
+                margin-right: 4px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #888888;
+
+                @media (max-width: 600px) {
+                    color: transparent;
+                    font-size: 5px;
+                }
+            }
+        }
+
+        .mail {
+            @media (max-width: 600px) {
+                background: url('./img/mail.svg') right center no-repeat;
+            }
+
+            a {
+                text-decoration: none;
+                color: #888888;
+
+                @media (max-width: 600px) {
+                    color: transparent;
+                    font-size: 5px;
+                }
+            }
         }
     }
 }

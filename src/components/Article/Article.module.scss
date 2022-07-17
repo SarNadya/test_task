@@ -3,26 +3,95 @@
     height: 546px;
     margin-bottom: 40px;
 
+    @media (max-width: 506px) {
+        height: 365px;
+    }
+
+    @media (max-width: 390px) {
+        margin-bottom: 31px;
+    }
+
     .art {
-        background: url('./img/K4C.png') right center no-repeat;
+        background: url('./img/K4C.png') right bottom/111% no-repeat;
         color: #fff;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         height: inherit;
-        margin-left: 137px;
+        margin-left: 9.5%;
+
+        @media (max-width: 665px) {
+            background-size: 140%;
+        }
+
+        @media (max-width: 390px) {
+            margin-left: 16px;
+            background: url('./img/K4C_m.svg') right bottom no-repeat;
+        }
 
         .title {
-            width: 574px;
+            width: 60%;
             margin: 100px 0 6px 0;
             font-size: 40px;
             line-height: 56px;
+
+            @media (max-width: 1073px) {
+                font-size: 34px;
+                margin-top: 60px;
+                width: 70%;
+            }
+
+            @media (max-width: 756px) {
+                font-size: 30px;
+                
+            }
+
+            @media (max-width: 665px) {
+                font-size: 26px;
+                width: 80%;
+            }
+
+            @media (max-width: 506px) {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @media (max-width: 390px) {
+                margin-bottom: 9px;
+            }
+
+            @media (max-width: 370px) {
+                font-size: 17px;
+            }
         }
 
         p {
-            width: 513px;
+            width: 50%;
             line-height: 24px;
             margin-bottom: 31px;
+
+            @media (max-width: 997px) {
+                width: 90%;
+            }
+
+            @media (max-width: 553px) {
+                width: 95%;
+                font-size: 15px;
+            }
+
+            @media (max-width: 506px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            @media (max-width: 390px) {
+                margin-bottom: 23px;
+            }
+
+            @media (max-width: 370px) {
+                font-size: 12px;
+            }
         }
 
         .btn {
@@ -37,6 +106,24 @@
             margin-bottom: 102px;
             font-family: 'Montserrat';
             font-size: 16px;
+
+            @media (max-width: 506px) {
+                width: 134px;
+                height: 45px;
+                font-size: 14px;
+                padding: 14px 24px;
+            }
+
+            @media (max-width: 390px) {
+                margin-bottom: 128px;
+            }
+
+            @media (max-width: 370px) {
+                font-size: 13px;
+                width: 119px;
+                height: 37px;
+                padding: 0px 14px;
+            }
         }
 
         .dots {
@@ -45,6 +132,12 @@
                 height: 3px;
                 margin-right: 6px;
                 opacity: 0.4;
+                border: none;
+                border-radius: 2px;
+
+                @media (max-width: 506px) {
+                    width: 20px;
+                }
             }
 
             button:first-child {

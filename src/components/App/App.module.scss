@@ -3,9 +3,17 @@
 
   .form_select {
     display: flex;
-    margin-left: 138px;
+    padding-left: 9.5%;
     position: sticky;
     top: 87px;
-    background: #fff;
+    background: #F6F9FF;
+
+    @media (max-width: 937px) {
+      padding-left: 4%;
+    }
+
+    @media (max-width: 875px) {
+      flex-direction: column;
+    }
   }
 }

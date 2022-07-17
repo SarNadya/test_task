@@ -1,3 +1,16 @@
 .wrap {
     display: inline;
+    width: 333px;
+
+    @media (max-width: 875px) {
+        width: 444px;
+    }
+
+    @media (max-width: 500px) {
+        width: 335px;
+    }
+
+    @media (max-width: 390px) {
+        width: 95.5%;
+    }
 }
