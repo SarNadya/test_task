@@ -8,3 +8,5 @@
 https://www.figma.com/file/06yGqefmmaDyMTsEcbJiBH/Test-task-for-Junior-frontend-developer?node-id=1%3A499
 >
 > - В проекте использовала React, React-hooks, Higher-Order Component, SCSS, Material UI, Axios.
+>
+> - Демо: https://post-list-ten.vercel.app/
