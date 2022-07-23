@@ -61,7 +61,25 @@ function App() {
   };
 
   function getSortedPostsDate(value) {
-    console.log('Workind');
+    const startDate = new Date(value[0]);
+    const endDate = new Date(value[1]);
+    const particles = posts.articles;
+    const dateArticles = particles.map(article => ({
+      ...article,
+      publishedAt: new Date(article.publishedAt)
+    }));
+    const sortedArticles = dateArticles.filter(article => article.publishedAt > startDate && article.publishedAt < endDate);
+    if (sortedArticles.length > 0) {
+      setPosts({
+        ...posts,
+        filteredArticles: sortedArticles
+      })
+    } else {
+      setPosts({
+        ...posts,
+        filteredArticles: []
+      });
+    }
   };
 
   return (

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, TextField }from '@mui/material';
 import { DateRangePicker } from '@mui/x-date-pickers-pro';
 import { LocalizationProvider } from '@mui/x-date-pickers-pro';
 import { AdapterDateFns } from '@mui/x-date-pickers-pro/AdapterDateFns';
 import styles from './DateSelect.module.scss';
 
-function DateSelect({articles, getSortedPostsDate}) {
+function DateSelect({getSortedPostsDate}) {
     const [value, setValue] = useState([null, null]);
-    console.log([value]);
+
+    useEffect(() => {
+        getSortedPostsDate(value);
+    }, [value]);
+
     return (
         <div className={styles.wrap}>
         <LocalizationProvider
@@ -18,6 +22,7 @@ function DateSelect({articles, getSortedPostsDate}) {
                 value={value}
                 onChange={(newValue) => {
                     setValue(newValue);
+                    getSortedPostsDate(value);
                 }}
                 renderInput={(startProps, endProps) => (
                     <React.Fragment>

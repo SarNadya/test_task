@@ -10,15 +10,19 @@ function PostList ({articles,requestError, err}) {
     )
 
     return (
-        <div className={styles.list}>
-            {articles.map(article =>
-                <div key={Math.random()} className={styles.item}>
-                    <div className={styles.date}> {new Date(article.publishedAt).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'})} </div>
-                    <div className={styles.title}> {article.title} </div>
-                    <div className={styles.content}> {article.description} </div>
-                    <button> {article.author} </button>
-                </div>
-            )}
+        <div>
+            { articles.length === 0 ?
+                <h1 className={styles.err}> Nothing not found </h1> :
+                <div className={styles.list}>
+                    {articles.map(article =>
+                        <div key={Math.random()} className={styles.item}>
+                            <div className={styles.date}> {new Date(article.publishedAt).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'})} </div>
+                            <div className={styles.title}> {article.title} </div>
+                            <div className={styles.content}> {article.description} </div>
+                            <button> {article.author} </button>
+                        </div>
+                    )}
+                </div>}
         </div>
     );
 };
